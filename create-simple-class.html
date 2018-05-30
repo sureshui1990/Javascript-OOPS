@@ -41,17 +41,29 @@
 
         // setValue in right way
         class AlientDetailNew{
-            constructor(_name,_age,_color,_power){
+            constructor(_name,_age,_color,_power,_weight,_height){
                 console.log("Alien list view");
                 this.name = _name;
                 this.age = _age;
                 this.color = _color;
                 this.power = _power;
+                this.weight = _weight;
+                this.height = _height;
+            }
+            displayDetail(){
+                return `The ${this.name} age is ${this.age} with color ${this.color} having the power of ${this.power}.`;
+            }
+            valueOfBMI(){
+                const bmi = Number(this.weight) + Number(this.age) ;
+                return `${this.weight} + ${this.age} => ${bmi}`;
             }
         }
-        const Haumangasour = new AlientDetailNew('Haumangasour','28','Yellow & gray','Massive punch');
+        const Haumangasour = new AlientDetailNew('Haumangasour','28','Yellow & gray','Massive punch',
+        150,10);
         console.log('Haumangasour: ', Haumangasour);
         console.log('Name : ',Haumangasour.name);
+        console.log(Haumangasour.displayDetail());
+        console.log(Haumangasour.valueOfBMI());
         
     </script>
 
