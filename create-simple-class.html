@@ -25,12 +25,34 @@
     <script>
         // Create simple class - oops
 
+        // setDefault value
         class AlientDetail{
             constructor(){
                 console.log("Alien list view");
+                this.name = "Four-arms";
+                this.age = "25";
+                this.color = "Red";
+                this.power = "Smash and action";
             }
         }
         const fourarms = new AlientDetail();
+        console.log('fourarms: ', fourarms);
+        console.log(fourarms.age);
+
+        // setValue in right way
+        class AlientDetailNew{
+            constructor(_name,_age,_color,_power){
+                console.log("Alien list view");
+                this.name = _name;
+                this.age = _age;
+                this.color = _color;
+                this.power = _power;
+            }
+        }
+        const Haumangasour = new AlientDetailNew('Haumangasour','28','Yellow & gray','Massive punch');
+        console.log('Haumangasour: ', Haumangasour);
+        console.log('Name : ',Haumangasour.name);
+        
     </script>
 
 </body>
